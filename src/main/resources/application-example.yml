@@ -1,0 +1,11 @@
+spring:  #配置spring
+  datasource:  #配置数据源
+    name: XXXX  #数据源名称
+    url: XXXX  #数据库连接地址
+    username: XXXX  #数据库用户名
+    password: XXXX  #数据库密码
+    driver-class-name: com.mysql.jdbc.Driver  #数据库驱动
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml  #配置映射文件
+  type-aliases-package: com.example.test.bean #配置实体类

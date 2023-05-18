@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.springboot_demo.Dao.UserDao">
+
+    <select id="selectUserByUsername" resultType="com.example.springboot_demo.Entity.User">
+        select * from user where username = #{username}
+    </select>
+
+    <select id="selectUserByEmail" resultType="com.example.springboot_demo.Entity.User">
+        select * from user where email = #{email}
+    </select>
+
+    <insert id="insertNewUser" parameterType="com.example.springboot_demo.Entity.User">
+        insert into user(username, password, email) values(#{username}, #{password}, #{email})
+    </insert>
+
+    <update id="updateUserByUsername" parameterType="com.example.springboot_demo.Entity.User">
+        update user set password = #{password} and email = #{email} where username = #{username}
+    </update>
+
+</mapper>
